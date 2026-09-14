@@ -35,11 +35,14 @@ export default function Skills() {
             >
               <div className="h-full rounded-[calc(1.75rem-0.375rem)] bg-black/40 p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.08)]">
                 <h3 className="font-display text-sm font-semibold text-white/90">{cat.title}</h3>
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-cyan-300/60">
+                  {cat.context}
+                </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {cat.items.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] text-white/60 transition-colors duration-500 hover:border-emerald-300/40 hover:text-emerald-200"
+                      className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] text-white/60 transition-colors duration-500 hover:border-cyan-300/40 hover:text-cyan-200"
                     >
                       {skill}
                     </span>

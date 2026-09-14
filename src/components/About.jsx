@@ -59,7 +59,7 @@ export default function About() {
               className="rounded-[1.75rem] bg-white/5 p-1.5 ring-1 ring-white/5"
             >
               <div className="rounded-[calc(1.75rem-0.375rem)] bg-black/40 p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.08)]">
-                <div className="mb-3 font-display text-xs uppercase tracking-[0.2em] text-emerald-300/80">
+                <div className="mb-3 font-display text-xs uppercase tracking-[0.2em] text-cyan-300/80">
                   {p.label}
                 </div>
                 <p className="text-sm leading-relaxed text-white/65">{p.text}</p>

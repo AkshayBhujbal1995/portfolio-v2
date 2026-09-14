@@ -14,7 +14,7 @@ export default function ProjectCard({ project, index, featured }) {
   const glowY = useTransform(mouseY, (v) => `${v * 100}%`);
   const glowBackground = useTransform(
     [glowX, glowY],
-    ([gx, gy]) => `radial-gradient(280px circle at ${gx} ${gy}, rgba(52,229,168,0.12), transparent 70%)`
+    ([gx, gy]) => `radial-gradient(280px circle at ${gx} ${gy}, rgba(103,232,249,0.12), transparent 70%)`
   );
 
   const handleMove = (e) => {
@@ -54,10 +54,10 @@ export default function ProjectCard({ project, index, featured }) {
         />
 
         <div className="relative flex items-start justify-between gap-4">
-          <span className="rounded-full border border-white/10 px-2.5 py-1 text-[10px] uppercase tracking-[0.15em] text-emerald-300/80">
+          <span className="rounded-full border border-white/10 px-2.5 py-1 text-[10px] uppercase tracking-[0.15em] text-cyan-300/80">
             {project.tier}
           </span>
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5 text-white/60 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-emerald-300 group-hover:text-black">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5 text-white/60 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-cyan-300 group-hover:text-black">
             <FiArrowUpRight />
           </span>
         </div>

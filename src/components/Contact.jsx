@@ -11,7 +11,7 @@ const links = [
 export default function Contact() {
   return (
     <section id="contact" className="relative px-4 py-24 md:py-40">
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-[24rem] w-[36rem] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-[24rem] w-[36rem] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-4xl text-center">
         <motion.span
@@ -20,7 +20,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mb-4 inline-block rounded-full border border-white/15 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white/50"
         >
-          Let's build something
+          Get in touch
         </motion.span>
 
         <motion.h2
@@ -30,7 +30,7 @@ export default function Contact() {
           transition={{ duration: 0.9, ease: [0.32, 0.72, 0, 1] }}
           className="font-display text-4xl font-semibold text-white sm:text-5xl md:text-6xl"
         >
-          Open to AI Engineer roles.
+          Let's talk AI systems.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ export default function Contact() {
           transition={{ delay: 0.2, duration: 0.9 }}
           className="mx-auto mt-4 max-w-md text-white/55"
         >
-          Pune, India · Open to on-site, hybrid, and remote.
+          Based in Pune, India — reachable anywhere.
         </motion.p>
 
         <motion.div
@@ -55,7 +55,7 @@ export default function Contact() {
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border border-white/15 pl-5 pr-2 py-2 text-sm text-white/85 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-emerald-300/40 active:scale-[0.98]"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/15 pl-5 pr-2 py-2 text-sm text-white/85 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-cyan-300/40 active:scale-[0.98]"
               >
                 <Icon className="text-white/60" />
                 {label}

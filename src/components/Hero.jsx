@@ -2,6 +2,14 @@ import { Suspense, lazy, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import Magnetic from "./Magnetic";
+import Typewriter from "./Typewriter";
+
+const ROLES = [
+  "agentic AI agents",
+  "real-time voice systems",
+  "production RAG pipelines",
+  "AI safety guardrails",
+];
 
 const AgentNetwork3D = lazy(() => import("./AgentNetwork3D"));
 
@@ -29,7 +37,7 @@ function PillButton({ href, children, primary }) {
         rel="noreferrer"
         className={`group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm font-medium transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98] ${
           primary
-            ? "bg-emerald-300 text-black hover:bg-emerald-200"
+            ? "bg-cyan-300 text-black hover:bg-cyan-200"
             : "border border-white/15 text-white/90 hover:border-white/30"
         }`}
       >
@@ -54,12 +62,12 @@ export default function Hero() {
       <motion.div
         animate={{ opacity: [0.55, 0.85, 0.55], scale: [1, 1.08, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -top-40 left-1/2 h-[38rem] w-[38rem] -translate-x-1/2 rounded-full bg-emerald-500/20 blur-[120px]"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[38rem] w-[38rem] -translate-x-1/2 rounded-full bg-cyan-500/20 blur-[120px]"
       />
       <motion.div
         animate={{ opacity: [0.4, 0.7, 0.4], scale: [1, 1.12, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="pointer-events-none absolute top-1/3 right-0 h-[28rem] w-[28rem] rounded-full bg-violet-500/15 blur-[120px]"
+        className="pointer-events-none absolute top-1/3 right-0 h-[28rem] w-[28rem] rounded-full bg-amber-500/15 blur-[120px]"
       />
 
       <div className="absolute inset-0 opacity-70">
@@ -77,9 +85,9 @@ export default function Hero() {
       >
         <motion.span
           variants={item}
-          className="mb-6 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-emerald-300/90 backdrop-blur"
+          className="mb-6 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-cyan-300/90 backdrop-blur"
         >
-          Open to AI Engineer roles
+          AI Engineer · Pune, India
         </motion.span>
 
         <motion.h1
@@ -91,11 +99,18 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mt-6 max-w-2xl text-balance text-base text-white/60 sm:text-lg"
+          className="mt-6 font-mono text-sm text-cyan-300/80 sm:text-base"
         >
-          AI Engineer building <span className="text-white/90">agentic AI</span>,{" "}
+          Building <Typewriter words={ROLES} className="text-white/90" />
+        </motion.p>
+
+        <motion.p
+          variants={item}
+          className="mt-4 max-w-2xl text-balance text-base text-white/60 sm:text-lg"
+        >
+          AI Engineer working across <span className="text-white/90">agentic AI</span>,{" "}
           <span className="text-white/90">real-time voice</span>, and{" "}
-          <span className="text-white/90">LLM orchestration &amp; safety</span> systems —
+          <span className="text-white/90">LLM orchestration &amp; safety</span> —
           MCP · LangGraph · RAG · Python.
         </motion.p>
 
@@ -105,6 +120,24 @@ export default function Hero() {
           </PillButton>
           <PillButton href="https://github.com/AkshayBhujbal1995">GitHub</PillButton>
           <PillButton href="https://www.linkedin.com/in/akshay-1995-bhujbal/">LinkedIn</PillButton>
+        </motion.div>
+
+        <motion.div
+          variants={item}
+          className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 border-t border-white/10 pt-6 font-mono text-[11px] uppercase tracking-[0.15em]"
+        >
+          <div>
+            <div className="text-white/35">Role</div>
+            <div className="mt-1 text-white/80">AI Engineer</div>
+          </div>
+          <div>
+            <div className="text-white/35">Focus</div>
+            <div className="mt-1 text-white/80">Agentic Systems &amp; LLM Orchestration</div>
+          </div>
+          <div>
+            <div className="text-white/35">Stack</div>
+            <div className="mt-1 text-white/80">MCP · LangGraph · RAG</div>
+          </div>
         </motion.div>
       </motion.div>
 

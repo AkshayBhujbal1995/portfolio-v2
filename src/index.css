@@ -9,12 +9,12 @@
   --color-surface: #0a0a0c;
   --color-surface-2: #101014;
   --color-hair: rgba(255, 255, 255, 0.08);
-  --color-emerald: #34e5a8;
-  --color-violet: #8b7bff;
+  --color-signal: #67e8f9;
+  --color-amber: #fbbf24;
 }
 
 ::selection {
-  background: var(--color-emerald);
+  background: var(--color-signal);
   color: #050505;
 }
 
@@ -38,6 +38,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 999px;
+}
+
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none !important;
 }
 
 .noise-overlay {

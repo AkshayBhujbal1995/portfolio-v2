@@ -68,13 +68,13 @@ function Network() {
     <group ref={group}>
       {lineGeometries.map((geometry, i) => (
         <line key={edges[i].key} geometry={geometry}>
-          <lineBasicMaterial color="#34e5a8" transparent opacity={0.18} />
+          <lineBasicMaterial color="#67e8f9" transparent opacity={0.18} />
         </line>
       ))}
       {nodes.map((pos, i) => (
         <mesh key={i} position={pos}>
           <sphereGeometry args={[i % 5 === 0 ? 0.07 : 0.045, 16, 16]} />
-          <meshBasicMaterial color={i % 5 === 0 ? "#8b7bff" : "#34e5a8"} />
+          <meshBasicMaterial color={i % 5 === 0 ? "#fbbf24" : "#67e8f9"} />
         </mesh>
       ))}
     </group>

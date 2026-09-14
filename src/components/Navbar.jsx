@@ -53,7 +53,7 @@ export default function Navbar() {
                 {active === link.href && (
                   <motion.span
                     layoutId="nav-pill"
-                    className="absolute inset-0 rounded-full bg-emerald-300"
+                    className="absolute inset-0 rounded-full bg-cyan-300"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
