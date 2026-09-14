@@ -30,19 +30,19 @@ const item = {
 
 function PillButton({ href, children, primary }) {
   return (
-    <Magnetic strength={14} className="inline-block">
+    <Magnetic strength={18} className="inline-block">
       <a
         href={href}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel="noreferrer"
-        className={`group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm font-medium transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98] ${
+        className={`group inline-flex items-center gap-3 rounded-full py-2.5 pl-8 pr-2.5 text-base font-semibold transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.97] ${
           primary
-            ? "bg-cyan-300 text-black hover:bg-cyan-200"
-            : "border border-white/15 text-white/90 hover:border-white/30"
+            ? "bg-cyan-300 text-black shadow-[0_0_40px_-8px_rgba(103,232,249,0.6)] hover:bg-cyan-200 hover:shadow-[0_0_50px_-6px_rgba(103,232,249,0.75)]"
+            : "border border-white/20 bg-white/[0.03] text-white/90 hover:border-white/40 hover:bg-white/[0.08]"
         }`}
       >
         {children}
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black/10 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105 dark:bg-white/10">
+        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-black/10 text-lg transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105 dark:bg-white/10">
           <FiArrowUpRight />
         </span>
       </a>

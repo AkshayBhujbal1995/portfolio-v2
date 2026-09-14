@@ -10,6 +10,7 @@ import Preloader from "./components/Preloader";
 import AgentMascot from "./components/AgentMascot";
 import Hud from "./components/Hud";
 import TickerStrip from "./components/TickerStrip";
+import ImpactStats from "./components/ImpactStats";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <TickerStrip />
         <About />
         <Skills />
+        <ImpactStats />
         <Projects />
         <Contact />
       </main>

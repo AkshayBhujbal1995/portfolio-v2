@@ -50,17 +50,17 @@ export default function Contact() {
           className="mt-12 flex flex-wrap items-center justify-center gap-3"
         >
           {links.map(({ label, href, icon: Icon }) => (
-            <Magnetic key={label} strength={12} className="inline-block">
+            <Magnetic key={label} strength={16} className="inline-block">
               <a
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border border-white/15 pl-5 pr-2 py-2 text-sm text-white/85 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-cyan-300/40 active:scale-[0.98]"
+                className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/[0.03] py-2.5 pl-7 pr-2.5 text-base font-medium text-white/90 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-cyan-300/40 hover:bg-white/[0.08] active:scale-[0.97]"
               >
-                <Icon className="text-white/60" />
+                <Icon className="text-lg text-white/60" />
                 {label}
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <FiArrowUpRight className="text-xs" />
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <FiArrowUpRight />
                 </span>
               </a>
             </Magnetic>

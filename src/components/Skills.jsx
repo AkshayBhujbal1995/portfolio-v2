@@ -1,5 +1,48 @@
 import { motion } from "framer-motion";
+import {
+  SiPython,
+  SiPandas,
+  SiNumpy,
+  SiScikitlearn,
+  SiTensorflow,
+  SiKeras,
+  SiPytorch,
+  SiOpencv,
+  SiDocker,
+  SiPostgresql,
+  SiNginx,
+  SiFastapi,
+  SiReact,
+  SiTypescript,
+  SiNextdotjs,
+  SiHuggingface,
+  SiGithubactions,
+} from "react-icons/si";
+import { FiCpu, FiCode, FiDatabase } from "react-icons/fi";
 import { skillCategories } from "../data/skills";
+
+const ICONS = {
+  python: SiPython,
+  pandas: SiPandas,
+  numpy: SiNumpy,
+  sklearn: SiScikitlearn,
+  tensorflow: SiTensorflow,
+  keras: SiKeras,
+  pytorch: SiPytorch,
+  opencv: SiOpencv,
+  docker: SiDocker,
+  postgresql: SiPostgresql,
+  nginx: SiNginx,
+  fastapi: SiFastapi,
+  react: SiReact,
+  typescript: SiTypescript,
+  nextjs: SiNextdotjs,
+  huggingface: SiHuggingface,
+  githubactions: SiGithubactions,
+  sql: FiDatabase,
+  api: FiCode,
+  agent: FiCpu,
+};
 
 export default function Skills() {
   return (
@@ -38,15 +81,21 @@ export default function Skills() {
                 <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-cyan-300/60">
                   {cat.context}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {cat.items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] text-white/60 transition-colors duration-500 hover:border-cyan-300/40 hover:text-cyan-200"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <div className="mt-5 flex flex-wrap gap-2.5">
+                  {cat.items.map((skill) => {
+                    const Icon = ICONS[skill.icon] ?? FiCpu;
+                    return (
+                      <span
+                        key={skill.name}
+                        className="group flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] py-2 pl-2.5 pr-3.5 font-mono text-[11px] text-white/70 transition-all duration-500 hover:border-cyan-300/40 hover:bg-white/[0.06] hover:text-cyan-200"
+                      >
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/5 text-white/60 transition-colors duration-500 group-hover:bg-cyan-300/15 group-hover:text-cyan-200">
+                          <Icon size={13} />
+                        </span>
+                        {skill.name}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </motion.div>
